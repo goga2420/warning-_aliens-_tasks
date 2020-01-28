@@ -7,7 +7,7 @@ from settings import Settings
 
 def run_game():
     pygame.init()
-    ai_settings = Settings()
+    ai_settings = Settings(pygame.image.load('alien.bmp'))
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption('Alien Invasion')
     aliens = Group()

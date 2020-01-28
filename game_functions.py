@@ -23,9 +23,8 @@ def prepare_alien(alien, alien_number, row_number):
 
 
 def create_fleet(ai_settings, screen, aliens):
-    #TODO поправить костыль
-    alien_width = Alien(ai_settings, screen).rect.width
-    alien_height = Alien(ai_settings, screen).rect.height
+    alien_width = ai_settings.alien_rect.width
+    alien_height = ai_settings.alien_rect.height
 
     number_aliens_columns = get_number_aliens_x(ai_settings.screen_width, alien_width)
     number_aliens_rows = get_number_rows(ai_settings.screen_height, alien_height)

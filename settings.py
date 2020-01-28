@@ -1,5 +1,5 @@
 class Settings:
-    def __init__(self):
+    def __init__(self, alien_image):
         self.title = "Alien Invasion"
         self.screen_width = 1200
         self.screen_height = 700
@@ -16,3 +16,7 @@ class Settings:
         self.fleet_drop_speed = 10
         self.speedup_scale = 1.1
         self.score_scale = 1.5
+
+        self.alien_image = alien_image
+        self.alien_rect = self.alien_image.get_rect()
+
