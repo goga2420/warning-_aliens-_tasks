@@ -1,11 +1,8 @@
-import sys
-
 import pygame
 from pygame.sprite import Group
+
 import game_functions as gf
 from settings import Settings
-
-
 
 
 def run_game():

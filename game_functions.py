@@ -1,4 +1,5 @@
 import pygame
+from random import randint
 
 from alien import Alien
 
@@ -14,6 +15,10 @@ def prepare_alien(alien, alien_number, row_number):
     alien_width = alien.rect.width
     alien.rect.x = alien_width + 2 * alien_width * alien_number
     alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
+
+    random_factor = 40
+    alien.rect.x += randint(-random_factor, random_factor)
+    alien.rect.y += randint(-random_factor, random_factor)
 
 
 
