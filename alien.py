@@ -5,13 +5,12 @@ from pygame.sprite import Sprite
 class Alien(Sprite):
     def __init__(self, ai_settings, screen):
         super(Alien, self).__init__()
-        self.screen = screen
-        self.ai_settings = ai_settings
 
-        self.image = pygame.image.load('images/alien.bmp')
+        self.ai_settings = ai_settings
+        self.screen = screen
+        self.image = pygame.image.load('alien.bmp')
 
         self.rect = self.image.get_rect()
-
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
 
@@ -23,12 +22,10 @@ class Alien(Sprite):
 
 
     def update(self):
-        self.y += self.ai_settings.alien_speed_factor * self.ai_settings.fleet_direection
-        self.rect.y = self.y
+        self.rect.y += self.ai_settings.alien_speed_factor * self.ai_settings.alien_speed_factor
 
 
     def check_bottom(self):
-        screen_rect = self.screen_rect.bottom()
-        if self.rect.bottom >= screen_rect.bottom:
+        if self.rect.bottom >= self.screen.get_rect().bottom:
             return True
 
